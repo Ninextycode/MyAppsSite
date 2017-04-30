@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block head %}
+    <script src="{% static '/js/encodepage.js'  %}"></script>
+    <title>Hider</title>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h3>Encoding</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-xs-offset-1">
+            <div class="form-group">
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="actionSelector">Method</label>
+                    <select name="method" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="actionSelector">
+                        <option value="loslessstega">png/bmp lsb steganography</option>
+                        <option value="jpegstega">jpeg tag steganography</option>
+                        <option value="plaincrypto">just cryptography</option>
+                    </select>
+
+                    <div id="containerField">
+                        <label for="containerFile">Container file</label>
+                        <input type="file" class="form-control-file" name="containerFile" id="containerFile" aria-describedby="fileHelp">
+                    </div>
+                    <label for="secretFile">Secret file</label>
+                    <input type="file" class="form-control-file" name="secretFile" id="secretFile" aria-describedby="fileHelp">
+
+                    <label for="keyFile">Key file</label>
+                    <input type="file" class="form-control-file" name="keyFile" id="keyFile" aria-describedby="fileHelp">
+                    <div class=text-center>
+                        <button type="submit" class="btn btn-primary">Encode</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

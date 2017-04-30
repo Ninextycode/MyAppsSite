@@ -1,0 +1,62 @@
+html, body {
+     height: 100%;
+     width: 100%;
+     margin: 0;
+}
+
+.row {
+    padding-bottom: 10px;
+}
+
+.container {
+
+    height: 100%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+#editor {
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+}
+
+#wrapper {
+    display: flex;
+    position: relative;
+    height: 70vh;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#logs {
+
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+#logs-area {
+
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+
+#image_row {
+    text-align: center;
+}
+#share_row {
+    text-align: center;
+}
+.buttons {
+    text-align: center;
+}
