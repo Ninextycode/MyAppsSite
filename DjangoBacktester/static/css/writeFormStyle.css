@@ -4,6 +4,10 @@ html, body {
      margin: 0;
 }
 
+body {
+    background-color: #fff1d3;
+}
+
 .row {
     padding-bottom: 10px;
 }
@@ -59,4 +63,8 @@ html, body {
 }
 .buttons {
     text-align: center;
+}
+
+#titlerow {
+    background-color: #eddbac;
 }
