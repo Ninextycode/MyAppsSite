@@ -1,0 +1,7 @@
+Django==1.10
+Pillow
+pandas
+scipy
+numpy
+matplotlib
+gunicorn
