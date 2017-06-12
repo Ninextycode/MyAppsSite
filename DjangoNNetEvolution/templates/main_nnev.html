@@ -1,8 +1,9 @@
-{% load static from staticfiles %}
+﻿{% load static from staticfiles %}
 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
 <head>
     <title>Bugs</title>
     <meta charset="utf-8" />
@@ -32,53 +33,54 @@
     </style>
 
 </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-10 col-xs-offset-2">
-                    <h1>Bugs eating grass<small>   (try to touch red bugs)</small></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-1">
-                    <canvas id="mainCanvas" width="800" height="500"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-11  col-sm-offset-1">
-                    <div style=" display:inline; margin-right:20px">Speed:</div>
-                    <input id="mainSpeed" type="range" step="0.1" min="0" max="8" style="width: 500px; display:inline; margin-right:20px">
-                    <label id="mainSpeedLabel" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-1">
-                    <input id="drawFieldsOfView" type="checkbox"> <label id="fieldOfVuewLabel">Draw fields of view</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-1" id="summary"></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-11">
-                    <canvas id="demoCanvas" width="300" height="300"></canvas>
-                    <canvas id="netCanvas" width="500" height="300"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-11  col-sm-offset-1">
-                    <div style=" display:inline; margin-right:20px">Speed:</div>
-                    <input id="demoSpeed" type="range" step="0.1" min="0" max="8" style="width: 400px; display:inline; margin-right:20px">
-                    <label id="demoSpeedLabel" />
-                </div>
-            </div>
-            <div class="row" style="margin-bottom:20px">
-                <div class="col-sm-offset-1 col-sm-11">
-                    <button id="removeDemoAnimalButton" class="btn btn-primary" type="button">Remove bug</button>
-                    <button id="cleanDemoButton" class="btn btn-primary" type="button">Clean from grass</button>
-                    <div style=" display:inline; margin-left:20px"><small>    (touch small canvas to plant grass)</small></div>
-                </div>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-xs-offset-2">
+                <h1>Bugs eating grass<small>   (try to touch red bugs)</small></h1>
             </div>
         </div>
-    </body>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <canvas id="mainCanvas" width="800" height="500"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-11  col-sm-offset-1">
+                <div style=" display:inline; margin-right:20px">Speed:</div>
+                <input id="mainSpeed" type="range" step="0.1" min="0" max="8" style="width: 500px; display:inline; margin-right:20px">
+                <label id="mainSpeedLabel" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <input id="drawFieldsOfView" type="checkbox"> <label id="fieldOfVuewLabel">Draw fields of view</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1" id="summary"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-11">
+                <canvas id="demoCanvas" width="300" height="300"></canvas>
+                <canvas id="netCanvas" width="500" height="300"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-11  col-sm-offset-1">
+                <div style=" display:inline; margin-right:20px">Speed:</div>
+                <input id="demoSpeed" type="range" step="0.1" min="0" max="8" style="width: 400px; display:inline; margin-right:20px">
+                <label id="demoSpeedLabel" />
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-sm-offset-1 col-sm-11">
+                <button id="removeDemoAnimalButton" class="btn btn-primary" type="button">Remove bug</button>
+                <button id="cleanDemoButton" class="btn btn-primary" type="button">Clean from grass</button>
+                <div style=" display:inline; margin-left:20px"><small>    (touch small canvas to plant grass)</small></div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
