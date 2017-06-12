@@ -33,5 +33,5 @@ urlpatterns = [
     url(r'^stega/encode/$', DjangoStega.views.encodeview , name='encode'),
     url(r'^stega/dencode/$', DjangoStega.views.decodeview, name='decode'),
 
-    url(r'^nnevolution/$', DjangoNNetEvolution.views.main_view, name='evolution')
+    url(r'^bugs/$', DjangoNNetEvolution.views.main_view, name='bugs')
 ]
