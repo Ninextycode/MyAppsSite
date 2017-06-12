@@ -18,6 +18,7 @@ from django.contrib import admin
 
 import DjangoBacktester.views
 import DjangoStega.views
+import DjangoNNetEvolution.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name="admin"),
@@ -27,7 +28,10 @@ urlpatterns = [
         DjangoBacktester.views.evaluate_strategy, name="evaluate"),
     url(r'^backtester/get_shares_graphs/$',
         DjangoBacktester.views.get_shares_graphs, name="get_image"),
+
     url(r'^stega/$', DjangoStega.views.encoderedirect),
     url(r'^stega/encode/$', DjangoStega.views.encodeview , name='encode'),
-    url(r'^stega/dencode/$', DjangoStega.views.decodeview, name='decode')
+    url(r'^stega/dencode/$', DjangoStega.views.decodeview, name='decode'),
+
+    url(r'^nnevolution/$', DjangoNNetEvolution.views.main_view, name='evolution')
 ]
